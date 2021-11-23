@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.example</groupId>
+  <artifactId>caltech</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+  <name>caltech</name>
+  <!-- FIXME change it to the project's website -->
+  <url>http://www.example.com</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
+  </properties>
+
+  <!-- 设定远程主仓库，按设定顺序进行查找。 -->
+  <repositories>
+
+    <!-- 如有Nexus私服, 取消注释并指向正确的服务器地址.
+    <repository>
+        <id>nexus-repos</id>
+        <name>Team Nexus Repository</name>
+        <url>http://192.168.11.36:8888/nexus/content/groups/public</url>
+    </repository> -->
+
+    <repository>
+      <id>oschina-repos</id>
+      <name>Oschina Releases</name>
+      <url>http://maven.oschina.net/content/groups/public</url>
+    </repository>
+
+    <repository>
+      <id>aliyun-repos</id>
+      <name>aliyun Releases</name>
+      <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+    </repository>
+
+    <repository>
+      <id>java-repos</id>
+      <name>Java Repository</name>
+      <url>https://maven.java.net/content/repositories/public/</url>
+    </repository>
+
+    <repository>
+      <id>JBoss-repos</id>
+      <name>JBoss Repository</name>
+      <url>http://repository.jboss.org/nexus/content/groups/public/</url>
+    </repository>
+
+    <repository>
+      <id>springsource-repos</id>
+      <name>SpringSource Repository</name>
+      <url>http://repo.spring.io/release/</url>
+    </repository>
+
+    <repository>
+      <id>central-repos</id>
+      <name>Central Repository</name>
+      <url>http://repo.maven.apache.org/maven2</url>
+    </repository>
+
+    <repository>
+      <id>central-repos2</id>
+      <name>Central Repository 2</name>
+      <url>http://repo1.maven.org/maven2/</url>
+    </repository>
+
+    <repository>
+      <id>activiti-repos</id>
+      <name>Activiti Repository</name>
+      <url>https://maven.alfresco.com/nexus/content/groups/public</url>
+    </repository>
+
+    <repository>
+      <id>activiti-repos2</id>
+      <name>Activiti Repository 2</name>
+      <url>https://app.camunda.com/nexus/content/groups/public</url>
+    </repository>
+
+    <repository>
+      <id>easonjim-repos</id>
+      <name>EasonJim Repository</name>
+      <url>https://raw.github.com/easonjim/repository/master</url>
+    </repository>
+
+  </repositories>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+      <plugins>
+        <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
+        <plugin>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>3.1.0</version>
+        </plugin>
+        <!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>3.0.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.8.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.22.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.0.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>2.5.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>2.8.2</version>
+        </plugin>
+        <!-- site lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
+        <plugin>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>3.7.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-project-info-reports-plugin</artifactId>
+          <version>3.0.0</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>8</source>
+          <target>8</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
